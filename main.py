@@ -280,14 +280,14 @@ def panel(p, x, y, w, h, tint, kicker, headline, body, icon,
     p.text(x + 14, y + 14, kicker, 3, tint)
     textw = w - 28 - (84 if icon else 0)
     lines = p.wrap(headline, textw, head_scale, head_track)
-    ly = y + 40
+    ly = y + 39
     for ln in lines:
         p.text(x + 14, ly, ln, head_scale, INK, head_track)
-        ly += head_scale * 7 + 3
-    by = ly + 4
+        ly += head_scale * 7 + 2
+    by = ly + 2
     for ln in p.wrap(body, textw, body_scale):
         p.text(x + 14, by, ln, body_scale, INK)
-        by += body_scale * 7 + 1
+        by += body_scale * 7 + 2
     if icon:
         ICONS[icon](p, x + w - 96, y + 44)
 
